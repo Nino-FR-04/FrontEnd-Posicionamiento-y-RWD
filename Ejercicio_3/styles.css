@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    background-color: #5B2C83;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+#navBar ul {
+    list-style: none;
+    display: flex;
+    gap: 40px; 
+    margin: 0;
+    padding: 0;
+}
+
+#navBar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#navBar ul li a:hover {
+    color: #00C4B3;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+}
+
+.producto {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.producto h3 {
+    font-size: 18px;
+    margin: 15px 0 10px;
+}
+
+.producto p {
+    font-size: 14px;
+    color: #555;
+}
+
+.desc_prod {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.precio {
+    background: #eee;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.estado {
+    background: #eee;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #009688;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/*Breakpoint 900px*/
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*Breakpoint 480px*/
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #navBar ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
